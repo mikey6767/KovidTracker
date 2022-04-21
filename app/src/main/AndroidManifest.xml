@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KovidTracker">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
             android:name=".FAQActivity"
             android:exported="false" />
         <activity
