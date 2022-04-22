@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KovidTracker">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".MainActivity"
             android:exported="true" >
              <intent-filter>
                   <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             android:name=".FAQActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreenActivity"
             android:exported="false" />
     </application>
 

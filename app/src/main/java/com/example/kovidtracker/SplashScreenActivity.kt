@@ -13,8 +13,8 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         Handler().postDelayed({ //Intent = navigation or transition from one screen to another.
-            val home = Intent(this@LoginActivity, Login::class.java)
-            startActivity(home)
+            //val home = Intent(this@LoginActivity, Login::class.java)
+            //startActivity(home)
             finish()
         }, loading_time.toLong())
     }
