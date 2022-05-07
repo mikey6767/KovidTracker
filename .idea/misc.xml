@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/drawable/bg_rounded_corner.xml" value="0.253" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_edit_profile.xml" value="0.23007246376811594" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_history.xml" value="0.23007246376811594" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/Maike/AndroidStudioProjects/KovidTracker/app/src/main/res/layout/login.xml" value="0.968562874251497" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/bg_dc.xml" value="0.273" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/ic_baseline_nearby_error_24.xml" value="0.262" />
