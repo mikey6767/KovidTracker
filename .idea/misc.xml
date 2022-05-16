@@ -4,9 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/drawable/bg_rounded_corner.xml" value="0.253" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/activity_faqactivity.xml" value="0.2441123188405797" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/activity_login.xml" value="0.22644927536231885" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/activity_main.xml" value="0.22644927536231885" />
         <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_edit_profile.xml" value="0.23007246376811594" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_faq.xml" value="0.22644927536231885" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_health_status.xml" value="0.24139492753623187" />
         <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_history.xml" value="0.23007246376811594" />
         <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/recycler_row_faq.xml" value="0.22644927536231885" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/recycler_row_history.xml" value="0.24139492753623187" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/recycler_row_hs.xml" value="0.22644927536231885" />
+        <entry key="..\:/EmbeddedProg/KovidTracker/app/src/main/res/layout/recycler_selection_hs.xml" value="0.22644927536231885" />
         <entry key="..\:/Users/Maike/AndroidStudioProjects/KovidTracker/app/src/main/res/layout/login.xml" value="0.968562874251497" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/bg_dc.xml" value="0.273" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/ic_baseline_nearby_error_24.xml" value="0.262" />

@@ -1,59 +1,82 @@
 package com.example.kovidtracker.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.kovidtracker.R
+import java.util.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM1 = "user"
 
 /**
  * A simple [Fragment] subclass.
  * Use the [HistoryFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
+data class DateLoc(val loc: String, val date: Date)
+
+class HistoryAdapter(private val dataSet: Array<DateLoc>): RecyclerView.Adapter<HistoryAdapter.HistoryRowViewHolder>() {
+
+    class HistoryRowViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val num: TextView = view.findViewById(R.id.his_numbering)
+        val loc: TextView = view.findViewById(R.id.his_location)
+        val date: TextView = view.findViewById(R.id.his_datetime)
+    }
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): HistoryRowViewHolder {
+        return HistoryRowViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.recycler_row_history, viewGroup, false))
+    }
+
+    override fun onBindViewHolder(viewHolder: HistoryRowViewHolder, position: Int) {
+        viewHolder.apply {
+            num.text = position.toString()
+            loc.text = dataSet[position].loc
+            date.text = dataSet[position].date.toString()
+        }
+    }
+
+    override fun getItemCount() = dataSet.size
+}
+
+
 class HistoryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var user: String? = null
+    private lateinit var adapter: HistoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            user = it.getString(ARG_PARAM1)
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_history, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //TODO proper data, proper layout
+        val data = arrayOf(DateLoc("Test1", Date()), DateLoc("Test2", Date()), DateLoc("Test3", Date()))
+        val recyclerView: RecyclerView = view.findViewById(R.id.his_rv)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = HistoryAdapter(data)
+        recyclerView.adapter = adapter
+    }
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HistoryFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(user: String) =
             HistoryFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(ARG_PARAM1, user)
                 }
             }
     }
