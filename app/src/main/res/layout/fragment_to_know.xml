@@ -10,13 +10,17 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="To Know List"
-        android:gravity="center"
-        android:background="@drawable/bg_tab"
-        android:layout_margin="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_tab"
+            android:gravity="center"
+            android:text="To Know List" />
     </RelativeLayout>
 
 </FrameLayout>
