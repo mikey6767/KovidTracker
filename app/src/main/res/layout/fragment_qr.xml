@@ -14,33 +14,33 @@
             android:id="@+id/rl_qr1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_tab"
-            android:layout_marginTop="60dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/bg_tab">
 
             <ImageButton
                 android:id="@+id/btn_qr"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:scaleType="fitCenter"
-                android:background="@color/white"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/qr_scanner"
                 android:layout_marginTop="3dp"
-                android:contentDescription="QR Scanner Image" />
+                android:background="@color/white"
+                android:contentDescription="QR Scanner Image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/qr_scanner" />
 
             <TextView
                 android:id="@+id/tv_qr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click Here to Check In"
                 android:layout_below="@+id/btn_qr"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="Click Here to Check In"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -105,6 +105,7 @@
                     android:textStyle="bold" />
 
                 <RelativeLayout
+                    android:id="@+id/tv_fdose_box"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_cv"
@@ -112,23 +113,69 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp">
 
+
                     <TextView
-                        android:id="@+id/tv_dose"
+                        android:id="@+id/tv_fdose"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:text="First Dose"
+                        android:text="First Dose:"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/tv_type"
+                        android:id="@+id/tv_ftype"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:layout_toEndOf="@+id/tv_dose"
+                        android:layout_toEndOf="@+id/tv_fdose"
+                        android:text="Pfizer"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_fdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_ftype"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_toEndOf="@+id/tv_fdose"
+                        android:text="01-01-2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tv_sdose_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fdose_box"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_sdose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Second Dose:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_stype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tv_sdose"
                         android:text="Pfizer"
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -138,10 +185,10 @@
                         android:id="@+id/tv_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_type"
+                        android:layout_below="@+id/tv_stype"
                         android:layout_marginStart="20dp"
                         android:layout_marginBottom="20dp"
-                        android:layout_toEndOf="@+id/tv_dose"
+                        android:layout_toEndOf="@+id/tv_sdose"
                         android:text="01-01-2022"
                         android:textColor="@color/black"
                         android:textSize="16sp"
