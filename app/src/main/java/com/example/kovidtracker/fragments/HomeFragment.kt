@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        home = view.findViewById<TextView>(R.id.tv_home)
+        home = view.findViewById<TextView>(R.id.tv_stats)
 
         home.setOnClickListener{
             Toast.makeText(context, "This is Home Fragment", Toast.LENGTH_SHORT).show()

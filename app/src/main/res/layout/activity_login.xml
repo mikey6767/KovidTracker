@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginBG"
+    android:background="@drawable/loginbg"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -64,7 +64,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edittextbg"
-            android:drawableLeft="@drawable/ic_mail"
+            android:drawableLeft="@drawable/ic_baseline_password_24"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Password"
