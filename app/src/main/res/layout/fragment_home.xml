@@ -73,6 +73,67 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/rvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_rvalue">
+
+            <TextView
+                android:id="@+id/tv_rvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:text="R Value"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_rvaluedate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="(until 25 May 2022)"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_below="@id/tv_rvalue"/>
+
+            <TextView
+                android:id="@+id/tv_rvaluefloat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="0.89"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:layout_below="@id/tv_rvaluedate"/>
+
+            <TextView
+                android:id="@+id/tv_rvalueaddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:text="+0.01 today"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_below="@id/tv_rvaluefloat"/>
+
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 
