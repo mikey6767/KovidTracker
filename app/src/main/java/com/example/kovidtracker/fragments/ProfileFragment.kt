@@ -22,6 +22,11 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.findViewById<Button>(R.id.profile_editbtn).setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, EditProfileFragment.newInstance("AAA")).commit()
+        }
+
         view.findViewById<Button>(R.id.profile_his_btn).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HistoryFragment.newInstance("AAA")).commit()
