@@ -58,19 +58,22 @@
             android:padding="30dp"
             android:background="@drawable/bg_rounded_corner">
             <Button
+                android:id="@+id/profile_his_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="check in history"
                 android:drawableLeft="@drawable/ic_baseline_history_24" />
             <Button
+                android:id="@+id/profile_hs_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="update health status"
                 android:drawableLeft="@drawable/ic_baseline_note_add_24" />
             <Button
+                android:id="@+id/profile_faq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="check in history"
+                android:text="F. A. Q."
                 android:drawableLeft="@drawable/ic_baseline_announcement_24" />
         </LinearLayout>
     </LinearLayout>
