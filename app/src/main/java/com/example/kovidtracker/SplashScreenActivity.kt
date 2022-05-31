@@ -3,19 +3,24 @@ package com.example.kovidtracker
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 
 class SplashScreenActivity : AppCompatActivity() {
-    var loading_time = 4000
 
-    //4000 = 4sec
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        Handler().postDelayed({ //Intent = navigation or transition from one screen to another.
-            //val home = Intent(this@LoginActivity, Login::class.java)
-            //startActivity(home)
+
+        //hide status bar and make the screen as a full screen activity
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+        Handler().postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
             finish()
-        }, loading_time.toLong())
+        }, 3000)
     }
 }

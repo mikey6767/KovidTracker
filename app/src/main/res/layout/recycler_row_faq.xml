@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--TODO decide layout, put things here-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_rounded_corner"
     android:padding="20dp">
 
+    <Button
+        android:id="@+id/faq_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:text="Placeholdertext"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/faq_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PlaceholderText"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq_title"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
