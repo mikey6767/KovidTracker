@@ -23,11 +23,11 @@ class MapFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        /*
         map = view.findViewById<TextView>(R.id.tv_map)
 
         map.setOnClickListener{
             Toast.makeText(context, "This is Map Fragment", Toast.LENGTH_SHORT).show()
-        }
+        }*/
     }
 }
