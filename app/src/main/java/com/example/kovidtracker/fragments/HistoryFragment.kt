@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kovidtracker.R
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 private const val ARG_PARAM1 = "user"
@@ -19,7 +21,7 @@ private const val ARG_PARAM1 = "user"
  * create an instance of this fragment.
  */
 
-data class DateLoc(val loc: String, val date: Date)
+data class DateLoc(val loc: String, val date: String)
 
 class HistoryAdapter(private val dataSet: Array<DateLoc>): RecyclerView.Adapter<HistoryAdapter.HistoryRowViewHolder>() {
 
@@ -37,7 +39,7 @@ class HistoryAdapter(private val dataSet: Array<DateLoc>): RecyclerView.Adapter<
         viewHolder.apply {
             num.text = position.toString()
             loc.text = dataSet[position].loc
-            date.text = dataSet[position].date.toString()
+            date.text = dataSet[position].date
         }
     }
 
@@ -64,7 +66,8 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //TODO proper data, proper layout
-        val data = arrayOf(DateLoc("Test1", Date()), DateLoc("Test2", Date()), DateLoc("Test3", Date()))
+        val d = "2022-01-01 12:34"
+        val data = arrayOf(DateLoc("Test1", d), DateLoc("Test2", d), DateLoc("Test3", d))
         val recyclerView: RecyclerView = view.findViewById(R.id.his_rv)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         adapter = HistoryAdapter(data)

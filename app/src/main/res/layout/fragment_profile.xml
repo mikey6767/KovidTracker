@@ -78,5 +78,13 @@
                 android:drawableLeft="@drawable/ic_baseline_announcement_24" />
         </LinearLayout>
     </LinearLayout>
-
+    <Button
+        android:id="@+id/profile_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:drawableLeft="@drawable/ic_baseline_logout_24"
+        android:backgroundTint="@color/red"
+        android:layout_gravity="bottom | center"
+        android:layout_marginBottom="50dp"/>
 </FrameLayout>

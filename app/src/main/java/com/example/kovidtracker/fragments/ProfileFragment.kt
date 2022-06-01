@@ -39,6 +39,9 @@ class ProfileFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, FaqFragment.newInstance("AAA")).commit()
         }
+        view.findViewById<Button>(R.id.profile_logout).setOnClickListener{
+            requireActivity().finish()
+        }
         //profile = view.findViewById<TextView>(R.id.tv_profile)
 
         /*profile.setOnClickListener{
