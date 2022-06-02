@@ -29,8 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
                     android:text="Total Confirmed Cases"
                     android:textAlignment="center"
                     android:textColor="#000000"
@@ -40,38 +39,38 @@
                     android:id="@+id/tv_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_stats"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:layout_below="@id/tv_stats"/>
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/tv_totalconfirmedcases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_date"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="999 Cases"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="30dp"
-                    android:layout_below="@id/tv_date"/>
+                    android:textSize="30dp" />
 
                 <TextView
                     android:id="@+id/tv_caseaddition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalconfirmedcases"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
                     android:text="+225 cases today"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:layout_below="@id/tv_totalconfirmedcases"/>
+                    android:textSize="15dp" />
 
 
             </RelativeLayout>
@@ -90,8 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
                     android:text="R Value"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
@@ -101,38 +99,38 @@
                     android:id="@+id/tv_rvaluedate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rvalue"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_below="@id/tv_rvalue"/>
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/tv_rvaluefloat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rvaluedate"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="0.89"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:layout_below="@id/tv_rvaluedate"/>
+                    android:textSize="30dp" />
 
                 <TextView
                     android:id="@+id/tv_rvalueaddition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rvaluefloat"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
                     android:text="+0.01 today"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_below="@id/tv_rvaluefloat"/>
+                    android:textSize="15dp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -149,8 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
                     android:text="R Value"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
@@ -160,13 +157,13 @@
                     android:id="@+id/tv_rvaluedate1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rvalue1"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_below="@id/tv_rvalue1"/>
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/tv_rvaluefloat1"
@@ -186,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
                     android:text="+0.01 today"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
@@ -208,7 +205,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
                     android:text="R Value"
                     android:textAlignment="center"
@@ -220,7 +217,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
@@ -245,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
                     android:text="+0.01 today"
                     android:textAlignment="center"
                     android:textColor="#ffffff"

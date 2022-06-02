@@ -11,6 +11,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
+        android:padding="15dp"
         android:background="@drawable/bg_tab">
 
     <RelativeLayout
@@ -28,38 +29,39 @@
             android:textSize="30dp"/>
 
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/tv_toknow_tittle">
 
-        <TextView
-            android:id="@+id/tv_toknowlist1"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. COVID-19 can spread between people."
-            android:layout_margin="15dp"
-            android:textSize="18dp"/>
+            android:layout_below="@id/tv_toknow_tittle"
+            android:layout_centerHorizontal="true">
 
-        <TextView
-            android:id="@+id/tv_toknowlist2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2. Stay away from crowds.. "
-            android:layout_margin="15dp"
-            android:textSize="18dp"
-            android:layout_below="@id/tv_toknowlist1"/>
+            <TextView
+                android:id="@+id/tv_toknowlist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="1. COVID-19 can spread between people."
+                android:textSize="18dp" />
 
-        <TextView
-            android:id="@+id/tv_toknowlist3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3. Wash your hands often. "
-            android:layout_margin="15dp"
-            android:textSize="18dp"
-            android:layout_below="@id/tv_toknowlist2"/>
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_toknowlist2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_toknowlist1"
+                android:layout_marginTop="15dp"
+                android:text="2. Stay away from crowds.. "
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_toknowlist3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_toknowlist2"
+                android:layout_marginTop="15dp"
+                android:text="3. Wash your hands often. "
+                android:textSize="18dp" />
+        </RelativeLayout>
 
     </RelativeLayout>
 

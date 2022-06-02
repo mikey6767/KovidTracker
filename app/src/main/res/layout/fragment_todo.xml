@@ -10,6 +10,8 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:padding="15dp"
         android:background="@drawable/bg_tab">
 
         <RelativeLayout
@@ -21,43 +23,45 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="To Do List"
+                android:text="Things To Do"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="15dp"
                 android:textSize="30dp"/>
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/tv_todo_tittle">
+            android:layout_below="@id/tv_todo_tittle"
+            android:layout_centerHorizontal="true">
 
             <TextView
                 android:id="@+id/tv_todolist1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:text="1. Stay home except to get medical care."
-                android:layout_margin="15dp"
-                android:textSize="18dp"/>
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/tv_todolist2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_todolist1"
+                android:layout_marginTop="15dp"
                 android:text="2. Monitor your symptoms carefully. If your symptoms get worse, call your healthcare provider immediately. "
-                android:layout_margin="15dp"
-                android:textSize="18dp"
-                android:layout_below="@id/tv_todolist1"/>
+                android:textAlignment="gravity"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/tv_todolist3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_todolist2"
+                android:layout_marginTop="15dp"
                 android:text="3. Get rest and stay hydrated. "
-                android:layout_margin="15dp"
-                android:textSize="18dp"
-                android:layout_below="@id/tv_todolist2"/>
+                android:textSize="18dp" />
 
         </RelativeLayout>
 
