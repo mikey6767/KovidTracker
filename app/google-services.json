@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "829739358070",
+    "project_id": "embedded-prog",
+    "storage_bucket": "embedded-prog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829739358070:android:0710e6f55792ac493b0c57",
+        "android_client_info": {
+          "package_name": "com.example.kovidtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829739358070-sk2ti03j5jcr41gg9gq1sbqjcvll4rg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAakvlyWc2EsR5Y38hK6AIRnwFtFnB8h2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829739358070-sk2ti03j5jcr41gg9gq1sbqjcvll4rg1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
