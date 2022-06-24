@@ -85,7 +85,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/et_registerPassword"
+            android:id="@+id/et_registerIC"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/et_registerPhoneNumber"
@@ -97,14 +97,14 @@
             android:drawableLeft="@drawable/ic_baseline_password_24"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Account Password"
+            android:hint="Identity Card Number"
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/et_registerConfirmPassword"
+            android:id="@+id/et_registerPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/et_registerPassword"
+            android:layout_below="@+id/et_registerIC"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginLeft="60dp"
@@ -114,14 +114,14 @@
             android:drawableLeft="@drawable/ic_baseline_password_24"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Reconfirm Account Password"
+            android:hint="Account Password"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@+id/et_registerConfirmPassword"
+            android:layout_below="@+id/et_registerPassword"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginLeft="150dp"
