@@ -94,7 +94,7 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextbg"
-            android:drawableLeft="@drawable/ic_baseline_password_24"
+            android:drawableLeft="@drawable/ic_ic"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Identity Card Number"

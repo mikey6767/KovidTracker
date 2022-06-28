@@ -106,22 +106,6 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-
-                            // send verification link
-
-                            FirebaseUser fuser = auth.getCurrentUser();
-                            fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Toast.makeText(SignupActivity.this, "Verification Email Has been Sent. Please Check Your Email.", Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
-                                }
-                            });
-
                             Toast.makeText(SignupActivity.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = auth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
@@ -145,7 +129,6 @@ public class SignupActivity extends AppCompatActivity {
 
                         }else {
                             Toast.makeText(SignupActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
