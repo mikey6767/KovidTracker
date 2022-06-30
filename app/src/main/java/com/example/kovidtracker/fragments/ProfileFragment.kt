@@ -1,12 +1,15 @@
 package com.example.kovidtracker.fragments
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.example.kovidtracker.LoginActivity
 import com.example.kovidtracker.R
+import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {
 
@@ -40,7 +43,11 @@ class ProfileFragment : Fragment() {
                 .replace(R.id.fragment_container, FaqFragment.newInstance("AAA")).commit()
         }
         view.findViewById<Button>(R.id.profile_logout).setOnClickListener{
-            requireActivity().finish()
+
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+//            finish()
         }
         //profile = view.findViewById<TextView>(R.id.tv_profile)
 

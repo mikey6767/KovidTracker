@@ -69,6 +69,7 @@ public class SignupActivity extends AppCompatActivity {
                 final String phone    = mPhone.getText().toString();
                 final String IC    = mIC.getText().toString();
 
+
                 if(TextUtils.isEmpty(fullName)){
                     mName.setError("Name is Required!");
                     return;
@@ -108,13 +109,13 @@ public class SignupActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(SignupActivity.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = auth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
+                            DocumentReference documentReferenceUser = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
                             user.put("fName",fullName);
                             user.put("email",email);
                             user.put("phone",phone);
                             user.put("IC",IC);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            documentReferenceUser.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
@@ -125,7 +126,28 @@ public class SignupActivity extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
+                            DocumentReference documentReferenceDose = fStore.collection("users").document(userID).collection("Dose").document(userID);
+                            Map<String, Object> thisUserDose = new HashMap<>();
+                            thisUserDose.put("DoseDate", 0);
+                            thisUserDose.put("DoseBrand", 0);
+                            documentReferenceDose.set(thisUserDose).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Log.d(TAG, "on Success: dose created for" + userID );
+                                }
+                            });
+                            DocumentReference documentReferenceCheckIn = fStore.collection("users").document(userID).collection("CheckIn").document(userID);
+                            Map<String, Object> thisUserCheckIn = new HashMap<>();
+                            thisUserDose.put("CheckInDate", 0);
+                            thisUserDose.put("CheckInLocation", 0);
+                            documentReferenceCheckIn.set(thisUserCheckIn).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Log.d(TAG, "on Success: user Profile is created for" + userID );
+                                }
+                            });
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            finish();
 
                         }else {
                             Toast.makeText(SignupActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
