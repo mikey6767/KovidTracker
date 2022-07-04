@@ -110,11 +110,11 @@ public class SignupActivity extends AppCompatActivity {
                             userID = auth.getCurrentUser().getUid();
                             DocumentReference documentReferenceUser = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
-                            user.put("fName",fullName);
+                            user.put("name",fullName);
                             user.put("email",email);
                             user.put("phone",phone);
                             user.put("IC",IC);
-                            user.put("healthStatus","Good");
+                            user.put("healthStatus",0);
                             documentReferenceUser.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
