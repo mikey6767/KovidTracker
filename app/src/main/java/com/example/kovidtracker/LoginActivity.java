@@ -37,11 +37,16 @@ public class LoginActivity extends AppCompatActivity {
         mLoginBtn = findViewById(R.id.btn_login);
         auth = FirebaseAuth.getInstance();
 
+        if(auth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+
         mSignupBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intent);
-                //finish();
+                finish();
             }
         });
 

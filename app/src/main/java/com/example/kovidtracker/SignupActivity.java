@@ -54,10 +54,9 @@ public class SignupActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        if(auth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
+        auth.getInstance().signOut();
+
+
 
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +114,7 @@ public class SignupActivity extends AppCompatActivity {
                             user.put("email",email);
                             user.put("phone",phone);
                             user.put("IC",IC);
+                            user.put("healthStatus","Good");
                             documentReferenceUser.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
@@ -138,8 +138,8 @@ public class SignupActivity extends AppCompatActivity {
                             });
                             DocumentReference documentReferenceCheckIn = fStore.collection("users").document(userID).collection("CheckIn").document(userID);
                             Map<String, Object> thisUserCheckIn = new HashMap<>();
-                            thisUserDose.put("CheckInDate", 0);
-                            thisUserDose.put("CheckInLocation", 0);
+                            thisUserCheckIn.put("CheckInDate", 0);
+                            thisUserCheckIn.put("CheckInLocation", 0);
                             documentReferenceCheckIn.set(thisUserCheckIn).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {

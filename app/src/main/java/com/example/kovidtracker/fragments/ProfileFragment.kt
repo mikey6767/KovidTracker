@@ -47,7 +47,9 @@ class ProfileFragment : Fragment() {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(requireContext(), LoginActivity::class.java)
             startActivity(intent)
-//            finish()
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            finish()
         }
         //profile = view.findViewById<TextView>(R.id.tv_profile)
 
