@@ -1,20 +1,22 @@
 package com.example.kovidtracker
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.annotation.Nullable
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.kovidtracker.fragments.*
-import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 class MainActivity : AppCompatActivity() {
 
     private val homeFragment = HomeFragment()
     private val infoFragment = InfoFragment()
-    private val mapFragment = MapFragment()
+    private val statusFragment = StatusFragment()
     private val profileFragment = ProfileFragment()
-    private val qrFragment = QrFragment()
+    private val checkInFragment = CheckInFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +32,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_home -> {
                     currentFragment(homeFragment)
                 }
-                R.id.ic_map -> {
-                    currentFragment(mapFragment)
+                R.id.ic_status -> {
+                    currentFragment(statusFragment)
                 }
                 R.id.ic_qr -> {
-                    currentFragment(qrFragment)
+                    currentFragment(checkInFragment)
                 }
                 R.id.ic_info -> {
                     currentFragment(infoFragment)
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         qrFAB.setOnClickListener {
-            currentFragment(qrFragment)
+            currentFragment(checkInFragment)
         }
 
     }
@@ -60,4 +62,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+}
+
+fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent?) {
+    onActivityResult(requestCode, resultCode, data)
 }

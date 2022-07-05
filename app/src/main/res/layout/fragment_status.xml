@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.QrFragment">
+    tools:context=".fragments.StatusFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,30 +17,33 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="60dp"
             android:layout_marginRight="50dp"
+            android:paddingBottom="10dp"
             android:background="@drawable/bg_tab">
 
-            <ImageButton
-                android:id="@+id/btn_qr"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="3dp"
-                android:background="@color/white"
-                android:contentDescription="QR Scanner Image"
-                android:scaleType="fitCenter"
-                android:src="@drawable/qr_scanner" />
-
             <TextView
-                android:id="@+id/tv_qr"
+                android:id="@+id/tv_riskStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_qr"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
-                android:text="Click Here to Check In"
+                android:text="Risk Status"
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_risk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_riskStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="Low Risk"
+                android:textColor="@color/red"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -120,12 +123,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:text="First Dose:"
+                        android:text="1st Dose:"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/tv_ftype"
+                        android:id="@+id/tv_fbrand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -140,7 +143,7 @@
                         android:id="@+id/tv_fdate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_ftype"
+                        android:layout_below="@+id/tv_fbrand"
                         android:layout_marginStart="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_toEndOf="@+id/tv_fdose"
@@ -165,12 +168,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:text="Second Dose:"
+                        android:text="2nd Dose:"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/tv_stype"
+                        android:id="@+id/tv_sbrand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -182,10 +185,10 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_date"
+                        android:id="@+id/tv_sdate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_stype"
+                        android:layout_below="@+id/tv_sbrand"
                         android:layout_marginStart="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_toEndOf="@+id/tv_sdose"

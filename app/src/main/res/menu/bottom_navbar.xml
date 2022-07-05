@@ -5,10 +5,11 @@
         android:id="@+id/ic_home"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24"/>
+
     <item
-        android:id="@+id/ic_map"
-        android:title="Map"
-        android:icon="@drawable/ic_baseline_share_location_24"/>
+        android:id="@+id/ic_status"
+        android:title="Status"
+        android:icon="@drawable/ic_baseline_find_in_page_24"/>
 
     <item
         android:id="@+id/ic_qr"
