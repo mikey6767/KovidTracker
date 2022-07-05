@@ -1,18 +1,35 @@
 package com.example.kovidtracker.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.kovidtracker.R
+import com.example.kovidtracker.RetrofitApi
+import com.example.kovidtracker.Statistics
+import com.google.gson.GsonBuilder
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 class HomeFragment : Fragment() {
 
-    lateinit var home: TextView
+    lateinit var totalconfirmedcases: TextView
+    lateinit var totalrecoverycases: TextView
+    lateinit var totalcriticalcases: TextView
+    lateinit var totaldeathcases: TextView
+    lateinit var covidnowbutton: Button
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,11 +42,52 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        home = view.findViewById<TextView>(R.id.tv_stats)
+        totalconfirmedcases = view.findViewById<TextView>(R.id.tv_statstotalconfirmedcases)
+        totalrecoverycases = view.findViewById<TextView>(R.id.tv_statstotalrecoverycases)
+        totalcriticalcases = view.findViewById<TextView>(R.id.tv_statstotalcriticalcases)
+        totaldeathcases = view.findViewById<TextView>(R.id.tv_statstotaldeathcases)
+        covidnowbutton = view.findViewById<Button>(R.id.btn_covidnow)
 
-        home.setOnClickListener{
-            Toast.makeText(context, "This is Home Fragment", Toast.LENGTH_SHORT).show()
+        covidnowbutton.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://covidnow.moh.gov.my/"))
+            startActivity(intent)
         }
+
+        // Creating a method to fetch data using Retrofit2
+        fetchApiDataUsingRetrofit()
+    }
+
+    public fun fetchApiDataUsingRetrofit() {
+
+        // Set up the Retrofit
+        // https://disease.sh/v3/covid-19/all
+        val baseUrl = "https://disease.sh/v3/covid-19/"
+        val gson = GsonBuilder().setLenient().create()
+        // Create a Retrofit builder and pass the gson in
+        val retrofit = Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+
+        // Implement the Retrofit Client interface function
+        val retrofitApi: RetrofitApi = retrofit.create(RetrofitApi::class.java)
+        val statisticsCall: Call<Statistics> = retrofitApi.getStatistics()
+        statisticsCall.enqueue(object : Callback<Statistics> {
+            // success
+            override fun onResponse(call: Call<Statistics>, response: Response<Statistics>) {
+                // bind the data from the API to the views
+                totalconfirmedcases.setText(response.body()?.getTodayCases()) // return cases value
+                totalrecoverycases.setText(response.body()?.getTodayRecovered())
+                totalcriticalcases.setText(response.body()?.getCritical())
+                totaldeathcases.setText(response.body()?.getTodayDeaths())
+            }
+
+            //failure
+            override fun onFailure(call: Call<Statistics>, t: Throwable) {
+                Log.e("ERROR: ", t.message!!)
+                Toast.makeText(activity, "Fail to get the data.." + t.message, Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 }

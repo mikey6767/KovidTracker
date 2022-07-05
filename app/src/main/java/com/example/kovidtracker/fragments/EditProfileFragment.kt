@@ -7,17 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.kovidtracker.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val USRNAME = "usrname"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [EditProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class EditProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var usrname: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
