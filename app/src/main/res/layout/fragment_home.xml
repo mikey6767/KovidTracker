@@ -20,17 +20,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="90dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_statistics">
+                android:background="@drawable/bg_statisticstotalconfirmedcases">
 
                 <TextView
-                    android:id="@+id/tv_stats"
+                    android:id="@+id/tv_stats1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:text="Total Confirmed Cases"
+                    android:text="Total Confirmed Cases Today"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="20dp" />
@@ -39,7 +39,7 @@
                     android:id="@+id/tv_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_stats"
+                    android:layout_below="@id/tv_stats1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
@@ -48,7 +48,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tv_totalconfirmedcases"
+                    android:id="@+id/tv_statstotalconfirmedcases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_date"
@@ -63,7 +63,7 @@
                     android:id="@+id/tv_caseaddition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_totalconfirmedcases"
+                    android:layout_below="@id/tv_statstotalconfirmedcases"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
@@ -80,35 +80,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rvalue">
+                android:background="@drawable/bg_statisticstotalrecoverycases">
 
                 <TextView
-                    android:id="@+id/tv_rvalue"
+                    android:id="@+id/tv_stats2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:text="R Value"
+                    android:text="Total Recovery Cases Today"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="20dp" />
 
                 <TextView
                     android:id="@+id/tv_rvaluedate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_rvalue"
+                    android:layout_below="@id/tv_stats2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tv_rvaluefloat"
+                    android:id="@+id/tv_statstotalrecoverycases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_rvaluedate"
@@ -116,20 +116,20 @@
                     android:layout_marginTop="10dp"
                     android:text="0.89"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="30dp" />
 
                 <TextView
                     android:id="@+id/tv_rvalueaddition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_rvaluefloat"
+                    android:layout_below="@id/tv_statstotalrecoverycases"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     android:text="+0.01 today"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="15dp" />
             </RelativeLayout>
 
@@ -138,44 +138,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rvalue1">
+                android:background="@drawable/bg_statisticstotalcriticalcases">
 
                 <TextView
-                    android:id="@+id/tv_rvalue1"
+                    android:id="@+id/tv_stats3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:text="R Value"
+                    android:text="Total Critical Cases Today"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="20dp" />
 
                 <TextView
                     android:id="@+id/tv_rvaluedate1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_rvalue1"
+                    android:layout_below="@id/tv_stats3"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="(until 25 May 2022)"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tv_rvaluefloat1"
+                    android:id="@+id/tv_statstotalcriticalcases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rvaluedate1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="0.89"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:layout_below="@id/tv_rvaluedate1"/>
+                    android:textColor="#000000"
+                    android:textSize="30dp" />
 
                 <TextView
                     android:id="@+id/tv_rvalueaddition1"
@@ -186,9 +186,9 @@
                     android:layout_marginBottom="20dp"
                     android:text="+0.01 today"
                     android:textAlignment="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="15dp"
-                    android:layout_below="@id/tv_rvaluefloat1"/>
+                    android:layout_below="@id/tv_statstotalcriticalcases"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -196,9 +196,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rvalue2">
+                android:background="@drawable/bg_statisticstotaldeathcases">
 
                 <TextView
                     android:id="@+id/tv_rvalue2"
@@ -207,13 +207,13 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="R Value"
+                    android:text="Total Death Cases"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/tv_rvaluedate2"
+                    android:id="@+id/tv_stats4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -225,16 +225,16 @@
                     android:layout_below="@id/tv_rvalue2"/>
 
                 <TextView
-                    android:id="@+id/tv_rvaluefloat2"
+                    android:id="@+id/tv_statstotaldeathcases"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_stats4"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="0.89"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:layout_below="@id/tv_rvaluedate2"/>
+                    android:textSize="30dp" />
 
                 <TextView
                     android:id="@+id/tv_rvalueaddition2"
@@ -247,10 +247,18 @@
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="15dp"
-                    android:layout_below="@id/tv_rvaluefloat2"/>
-
-
+                    android:layout_below="@id/tv_statstotaldeathcases"/>
             </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_covidnow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Click Here to Know More"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="90dp"
+                android:layout_marginRight="30dp"/>
 
 
         </LinearLayout>
