@@ -71,7 +71,7 @@ class ProfileFragment : Fragment() {
                 if (documentSnapshot!!.exists()) {
                     phonenumber.setText(documentSnapshot.getString("phone"))
                     IC.setText(documentSnapshot.getString("IC"))
-                    profilename.setText(documentSnapshot.getString("name"))
+                    profilename.setText(documentSnapshot.getString("fName"))
                     email.text = documentSnapshot.getString("email")
                 } else {
                     Log.d("tag", "onEvent: Document do not exists")
@@ -83,7 +83,7 @@ class ProfileFragment : Fragment() {
 //                .replace(R.id.fragment_container, EditProfileFragment.newInstance("AAA")).commit()
             val intent = Intent(requireContext(), EditprofileActivity::class.java)
             startActivity(intent)
-            intent.putExtra("name", profilename.getText().toString())
+            intent.putExtra("fName", profilename.getText().toString())
             intent.putExtra("email", email.text.toString())
             intent.putExtra("phone", phonenumber.getText().toString())
             intent.putExtra("IC", IC.text.toString())

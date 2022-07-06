@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HealthStatusFragment">
+    tools:context=".fragments.HealthStatusFragment"
+    android:background="@drawable/inappbg">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -11,13 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="40dp">
+        android:padding="30dp">
+
         <TextView
+            android:id="@+id/tv_healthtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_date"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/baloo"
             android:text="Health Status"
-            android:textSize="40dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/smoothpurple"
+            android:textSize="40dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Are you exhibiting 2 or more symptoms as listed below?\n-Fever\n-Chills\n-Shivering(rigor)\n-Body ache\n-Headache\n-Sore throat\n-Nausea or vomiting\n-Diarrhea\n-Runny nose or nasal congestion"
                 />
             <RadioGroup
@@ -60,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Besides the above, are you exhibiting any of the symptoms listed below?\n-Cough\n-Difficulty breathing\n-Loss of smell\n-Loss of taste"
                 />
             <RadioGroup
@@ -90,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Have you attended any event/areas associated with known COVID-19 cluster?"
                 />
             <RadioGroup
@@ -120,6 +132,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Have you travelled abroad within the last 14 days?"
                 />
             <RadioGroup
@@ -150,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Have you had close contact with any confirmed or suspected COVID-19 cases within the last 14 days?"
                 />
             <RadioGroup
@@ -180,6 +194,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
                 android:text="Are you a MOH COVID-19 volunteer in the last 14 days?"
                 />
             <RadioGroup

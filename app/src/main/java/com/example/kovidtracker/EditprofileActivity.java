@@ -57,7 +57,7 @@ public class EditprofileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editprofile);
 
         Intent data = getIntent();
-        final String Aname = data.getStringExtra("name");
+        final String Aname = data.getStringExtra("fName");
         String Aemail = data.getStringExtra("email");
         String Aphone = data.getStringExtra("phone");
         String AIC = data.getStringExtra("IC");
@@ -96,7 +96,7 @@ public class EditprofileActivity extends AppCompatActivity {
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 if(documentSnapshot.exists()){
                     phone.setText(documentSnapshot.getString("phone"));
-                    name.setText(documentSnapshot.getString("name"));
+                    name.setText(documentSnapshot.getString("fName"));
                     email.setText(documentSnapshot.getString("email"));
                     IC.setText(documentSnapshot.getString("IC"));
 
@@ -149,7 +149,7 @@ public class EditprofileActivity extends AppCompatActivity {
                         DocumentReference docRef = fStore.collection("users").document(user.getUid());
                         Map<String,Object> edited = new HashMap<>();
                         edited.put("email",cemail);
-                        edited.put("name",cname);
+                        edited.put("fName",cname);
                         edited.put("phone",cphone);
                         edited.put("IC",cic);
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {

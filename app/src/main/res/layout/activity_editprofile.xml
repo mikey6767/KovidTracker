@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".EditprofileActivity"
-    android:background="@color/background">
+    android:background="@drawable/inappbg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -157,8 +157,19 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="25dp"
                     android:text="Change Password" />
+
+                <Button
+                    android:id="@+id/btn_backprofilefrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Back"
+                    android:layout_below="@+id/btn_updateprofilepassword"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"/>
 
 
 
@@ -175,16 +186,7 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/bg_checkin_details">
 
-                <Button
-                    android:id="@+id/btn_backprofilefrag"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:text="Back"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_marginLeft="60dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"/>
+
 
             </RelativeLayout>
 
