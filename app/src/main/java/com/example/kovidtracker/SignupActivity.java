@@ -126,23 +126,27 @@ public class SignupActivity extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            String fDose= "FirstDose";
-                            DocumentReference documentReferenceDose = fStore.collection("users").document(userID).collection("Dose").document(fDose);
-                            Map<String, Object> thisUserDose = new HashMap<>();
-                            thisUserDose.put("DoseDate", "2020-10-01");
-                            thisUserDose.put("DoseBrand", "Pfizer");
-                            documentReferenceDose.set(thisUserDose).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            String fDose= "1Dose";
+                            DocumentReference documentReferenceDose1 = fStore.collection("users").document(userID).collection("Dose").document(fDose);
+                            Map<String, Object> thisUserDose1 = new HashMap<>();
+                            thisUserDose1.put("brand", "Pfizer");
+                            thisUserDose1.put("batch", "B001202010");
+                            thisUserDose1.put("facility", "CLINIC NULL");
+                            thisUserDose1.put("date", "2020-10-01");
+                            documentReferenceDose1.set(thisUserDose1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Log.d(TAG, "on Success: 1dose created for" + userID );
                                 }
                             });
-                            String sDose= "SecondDose";
-                            DocumentReference documentReferenceCheckIn = fStore.collection("users").document(userID).collection("Dose").document(sDose);
-                            Map<String, Object> thisUserCheckIn = new HashMap<>();
-                            thisUserCheckIn.put("DoseDate", "2020-11-01");
-                            thisUserCheckIn.put("DoseBrand", "Pfizer");
-                            documentReferenceCheckIn.set(thisUserCheckIn).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            String sDose= "2Dose";
+                            DocumentReference documentReferenceDose2 = fStore.collection("users").document(userID).collection("Dose").document(sDose);
+                            Map<String, Object> thisUserDose2 = new HashMap<>();
+                            thisUserDose2.put("brand", "Pfizer");
+                            thisUserDose2.put("batch", "B001202010");
+                            thisUserDose2.put("facility", "CLINIC NULL");
+                            thisUserDose2.put("date", "2020-10-01");
+                            documentReferenceDose2.set(thisUserDose2).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Log.d(TAG, "on Success: 2dose is created for" + userID );

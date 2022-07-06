@@ -41,7 +41,7 @@ public class CheckInFragment extends Fragment {
     // Initialize firebase
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     FirebaseAuth fAuth = FirebaseAuth.getInstance();
-
+    // Get current user instance
     FirebaseUser currentUser = fAuth.getCurrentUser();
     private String userId = currentUser.getUid();
     CollectionReference collectionReference = fStore.collection("users").document(userId).collection("CheckIn");
@@ -55,16 +55,12 @@ public class CheckInFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_checkin, container, false);
 
-
-        // Get current user instance
-        //FirebaseUser currentUser = fAuth.getCurrentUser();
-        //userId = currentUser.getUid();
         collectionReference.get();
 
         recyclerView = view.findViewById(R.id.recyclerview);
         // Linear Vertical
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        //recyclerView.setHasFixedSize(true);
+
 
         RetrieveData();
 
@@ -110,9 +106,8 @@ public class CheckInFragment extends Fragment {
 
                 holder.location.setText(model.getLocation());
                 holder.date.setText(model.getDate());
-                Log.e("History", String.valueOf(holder.location));
-                Log.e("History", String.valueOf(holder.date));
-
+                Log.e("ScanResult*******", model.getLocation());
+                Log.e("ScanResult*******", model.getDate());
             }
 
             @Override
@@ -126,6 +121,7 @@ public class CheckInFragment extends Fragment {
             }
         };
         historyAdapter.startListening();
+
         recyclerView.setAdapter(historyAdapter);
     }
 
