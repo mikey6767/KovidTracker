@@ -56,6 +56,9 @@ public class CheckInFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_checkin, container, false);
 
         collectionReference.get();
+//        if(collectionReference.get() != null){
+//
+//        }
 
         recyclerView = view.findViewById(R.id.recyclerview);
         // Linear Vertical

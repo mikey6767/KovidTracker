@@ -31,12 +31,11 @@
 
             <RelativeLayout
                 android:id="@+id/rl_qr1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rounded_corner">
+                android:background="@drawable/bg_checkin">
 
                 <ImageButton
                     android:id="@+id/btn_qr"
@@ -55,10 +54,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/btn_qr"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Click Here to Check In"
+                    android:text="Click Scanner to Check In"
                     android:textColor="@color/black"
-                    android:textSize="25dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -68,16 +68,16 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rounded_corner">
+                android:background="@drawable/bg_checkin_history">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:background="@drawable/bg_tab"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:id="@+id/tv_dc"

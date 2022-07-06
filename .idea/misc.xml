@@ -60,7 +60,12 @@
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable-v24/bg_rvalue.xml" value="0.2435" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable-v24/bg_rvalue1.xml" value="0.2435" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable-v24/bg_rvalue2.xml" value="0.2435" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable-v24/bg_statisticstotalconfirmedcases.xml" value="0.1865" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/bg_checkin.xml" value="0.1865" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/bg_checkin_history.xml" value="0.1865" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/drawable/bg_rounded_corner.xml" value="0.1865" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/activity_faqactivity.xml" value="0.27219202898550726" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_checkin.xml" value="0.33" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_edit_profile.xml" value="0.1" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_faq.xml" value="0.1" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_health_status.xml" value="0.1" />
@@ -68,8 +73,10 @@
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_info.xml" value="0.1" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_status.xml" value="0.25" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_to_know.xml" value="0.25" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/fragment_todo.xml" value="0.25" />
+        <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/recycler_row_dose.xml" value="0.33" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/recycler_row_faq.xml" value="0.1057013118062563" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/recycler_row_history.xml" value="0.11301715438950555" />
         <entry key="..\:/XMUM/202204/Embedded Programming/Assignment/assignment1/app/src/main/res/layout/recycler_row_hs.xml" value="0.23333333333333334" />

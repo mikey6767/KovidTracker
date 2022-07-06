@@ -1,6 +1,7 @@
 package com.example.kovidtracker.fragments;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -105,8 +106,10 @@ public class StatusFragment extends Fragment {
                     String lowRisk = "Low Risk";
                     if(status > 10){
                         tv_risk.setText(highRisk);
+                        tv_risk.setTextColor(Color.parseColor("#db0012"));
                     }else{
                         tv_risk.setText(lowRisk);
+                        tv_risk.setTextColor(Color.parseColor("#ffffff"));
                     }
 
                 }else{

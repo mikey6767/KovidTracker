@@ -32,39 +32,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <RelativeLayout
                     android:id="@+id/rl_qr1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="50dp"
-                    android:background="#89e9fa"
                     android:paddingBottom="10dp">
 
-                    <TextView
-                        android:id="@+id/tv_riskStatus"
-                        android:layout_width="wrap_content"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Risk Status"
-                        android:textColor="@color/black"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        app:cardBackgroundColor="#dcc7f0"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true">
 
-                    <TextView
-                        android:id="@+id/tv_risk"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_riskStatus"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="10dp"
-                        android:text="Low Risk"
-                        android:textColor="@color/red"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <!-- put whatever you want -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_riskStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="COVID-19 Risk Status"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_risk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_riskStatus"
+                                android:layout_centerHorizontal="true"
+
+                                android:text="Low Risk"
+                                android:textColor="@color/red"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
 
                 </RelativeLayout>
 
@@ -73,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rl_qr1"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/bg_dc">
 
