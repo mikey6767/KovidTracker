@@ -89,10 +89,7 @@ class ProfileFragment : Fragment() {
             intent.putExtra("IC", IC.text.toString())
         }
 
-        view.findViewById<Button>(R.id.profile_his_btn).setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HistoryFragment.newInstance("AAA")).commit()
-        }
+
         view.findViewById<Button>(R.id.profile_hs_btn).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HealthStatusFragment.newInstance("AAA")).commit()

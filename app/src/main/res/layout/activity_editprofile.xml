@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".EditprofileActivity">
+    tools:context=".EditprofileActivity"
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_statisticstotalconfirmedcases">
+                android:background="@drawable/bg_checkin_details">
 
                 <ImageView
                     android:id="@+id/img_profilePictureChange"
@@ -37,13 +38,14 @@
                     android:id="@+id/tv_editprofile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_profilePictureChange"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/baloo"
                     android:text="Edit Profile"
                     android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="30dp"
-                    android:layout_below="@+id/img_profilePictureChange"/>
+                    android:textColor="@color/smoothpurple"
+                    android:textSize="40dp" />
 
                 <TextView
                     android:id="@+id/tv_editprofiledescp"
@@ -171,7 +173,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_statisticstotalconfirmedcases">
+                android:background="@drawable/bg_checkin_details">
 
                 <Button
                     android:id="@+id/btn_backprofilefrag"

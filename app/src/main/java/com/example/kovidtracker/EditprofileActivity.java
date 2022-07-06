@@ -74,8 +74,7 @@ public class EditprofileActivity extends AppCompatActivity {
         updateprofileBtn =(Button)findViewById(R.id.btn_updateprofile);
         updatePasswordBtn =(Button)findViewById(R.id.btn_updateprofilepassword);
         backFragmentbtn =(Button)findViewById(R.id.btn_backprofilefrag);
-        password =(EditText) findViewById(R.id.et_profilepassword);
-        confirmpassword =(EditText) findViewById(R.id.et_profileconfirmpassword);
+
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         user = fAuth.getCurrentUser();

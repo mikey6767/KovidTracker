@@ -13,7 +13,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         app:srcCompat="@drawable/logo" />
 
     <RelativeLayout
@@ -23,19 +23,20 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/bg_checkin_details">
+        android:background="@drawable/bg_rounded_corner">
 
         <TextView
             android:id="@+id/tv_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/baloo"
+
             android:text="Sign In"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="30dp" />
+            android:textColor="@color/smoothpurple"
+            android:textSize="40dp" />
 
         <EditText
             android:id="@+id/et_loginEmail"
@@ -45,7 +46,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/edittextbg"
             android:drawableLeft="@drawable/ic_mail"
             android:drawablePadding="10dp"
@@ -61,7 +62,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edittextbg"
             android:drawableLeft="@drawable/ic_baseline_password_24"
@@ -90,7 +91,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginLeft="150dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="40dp"
             android:ems="10"
             android:text="Sign Up" />

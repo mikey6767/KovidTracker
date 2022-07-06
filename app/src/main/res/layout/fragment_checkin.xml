@@ -4,75 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CheckInFragment">
+    tools:context=".fragments.CheckInFragment"
+    android:background="@drawable/inappbg2">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:id="@+id/rl_qr1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginRight="50dp"
-            android:background="@drawable/bg_tab">
-
-            <ImageButton
-                android:id="@+id/btn_qr"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="3dp"
-                android:background="@color/white"
-                android:contentDescription="QR Scanner Image"
-                android:scaleType="fitCenter"
-                android:src="@drawable/qr_scanner" />
-
-            <TextView
-                android:id="@+id/tv_qr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_qr"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
-                android:text="Click Here to Check In"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rl_qr1"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="40dp"
-            android:padding="10dp"
-            android:background="@drawable/bg_tab"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_dc"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_CHECKINtitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Check In History"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:layout_below="@id/tv_date"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/baloo"
+                android:text="Check In/History"
+                android:textAlignment="center"
+                android:textColor="@color/smoothpurple"
+                android:textSize="40dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview"
+            <RelativeLayout
+                android:id="@+id/rl_qr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_rounded_corner">
+
+                <ImageButton
+                    android:id="@+id/btn_qr"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/white"
+                    android:contentDescription="QR Scanner Image"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/qr_scanner" />
+
+                <TextView
+                    android:id="@+id/tv_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_qr"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="Click Here to Check In"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_rounded_corner">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_tab"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_dc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Check In History"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
         </LinearLayout>
-
-    </RelativeLayout>
-
+    </ScrollView>
 </FrameLayout>
