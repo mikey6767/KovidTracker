@@ -10,12 +10,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.kovidtracker.EditprofileActivity
 import com.example.kovidtracker.LoginActivity
 import com.example.kovidtracker.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -33,6 +32,8 @@ class ProfileFragment : Fragment() {
     lateinit var profileImage: ImageView
     lateinit var storageReference: StorageReference
     lateinit var userId: String
+
+
 
     private var usrname = ""
     //lateinit var profile: TextView
@@ -78,8 +79,14 @@ class ProfileFragment : Fragment() {
             })
 
         view.findViewById<Button>(R.id.btn_editprofile).setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, EditProfileFragment.newInstance("AAA")).commit()
+//            requireActivity().supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, EditProfileFragment.newInstance("AAA")).commit()
+            val intent = Intent(requireContext(), EditprofileActivity::class.java)
+            startActivity(intent)
+            intent.putExtra("name", profilename.getText().toString())
+            intent.putExtra("email", email.text.toString())
+            intent.putExtra("phone", phonenumber.getText().toString())
+            intent.putExtra("IC", IC.text.toString())
         }
 
         view.findViewById<Button>(R.id.profile_his_btn).setOnClickListener {
