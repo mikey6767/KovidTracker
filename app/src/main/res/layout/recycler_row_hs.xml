@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_rounded_corner"
     android:layout_marginTop="10dp"
-    android:padding="10dp">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/hs_question"

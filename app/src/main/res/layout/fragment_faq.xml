@@ -30,27 +30,12 @@
                 android:textSize="40dp" />
             <androidx.recyclerview.widget.RecyclerView
 
-                android:id="@+id/hs_rv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_rounded_corner"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"/>
+            android:id="@+id/hs_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"/>
 
-        </LinearLayout>
-
-
-
-
-
-
-
+    </LinearLayout>
     </ScrollView>
-
-
-
-
-
-
-
 </FrameLayout>

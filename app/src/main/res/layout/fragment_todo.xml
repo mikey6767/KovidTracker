@@ -36,7 +36,7 @@
                     android:textColor="@color/smoothpurple"
                     android:textSize="36dp" />
 
-                <RelativeLayout
+                <!--<RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_todotitle"
@@ -73,8 +73,12 @@
                         android:text="3. Get rest and stay hydrated. "
                         android:textColor="#000000"
                         android:textSize="18dp" />
-                </RelativeLayout>
-
+                </RelativeLayout>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/to_do_rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_todotitle"/>
             </RelativeLayout>
 
 
@@ -83,7 +87,7 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </ScrollView>-->
 
 
 </FrameLayout>

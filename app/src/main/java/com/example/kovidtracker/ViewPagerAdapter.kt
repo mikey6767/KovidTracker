@@ -6,17 +6,18 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.example.kovidtracker.fragments.ToKnowFragment
 import com.example.kovidtracker.fragments.TodoFragment
 
-class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
-
+class ViewPagerAdapter(fm: FragmentManager, val toKnow:String, val toDo: String) : FragmentPagerAdapter(fm) {
+    val knowFrag = ToKnowFragment(toKnow)
+    val doFrag = TodoFragment(toDo)
     override fun getCount(): Int {
         return 2
     }
 
     override fun getItem(position: Int): Fragment {
         return when(position){
-            0-> ToKnowFragment()
-            1-> TodoFragment()
-            else -> ToKnowFragment()
+            0-> knowFrag
+            1-> doFrag
+            else -> knowFrag
         }
     }
 

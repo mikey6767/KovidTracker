@@ -1,6 +1,7 @@
 package com.example.kovidtracker.fragments
 
 import android.os.Bundle
+import android.util.JsonReader
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import androidx.viewpager.widget.ViewPager
 import com.example.kovidtracker.R
 import com.example.kovidtracker.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.firestore.FirebaseFirestore
+import java.io.StringReader
 
 class InfoFragment : Fragment() {
 
@@ -31,10 +34,14 @@ class InfoFragment : Fragment() {
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPager = view.findViewById(R.id.viewPager)
 
-        viewPager.adapter = ViewPagerAdapter(childFragmentManager)
-        tabLayout.setupWithViewPager(viewPager)
+        FirebaseFirestore.getInstance().collection("common").document("info").get().addOnSuccessListener {
+            viewPager.adapter = ViewPagerAdapter(childFragmentManager, it["know"].toString(), it["do"].toString())
+            tabLayout.setupWithViewPager(viewPager)
+        }
 
+    }
 
+    private fun buildData(json: String){
 
     }
 }

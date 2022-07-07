@@ -36,6 +36,13 @@
                     android:textColor="@color/smoothpurple"
                     android:textSize="36dp" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/to_know_rc"
+                    android:layout_below="@id/tv_toknowtitle"
+                    />
+                <!--
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,7 +80,7 @@
                         android:textColor="#000000"
                         android:textSize="18dp" />
                 </RelativeLayout>
-
+-->
             </RelativeLayout>
 
 

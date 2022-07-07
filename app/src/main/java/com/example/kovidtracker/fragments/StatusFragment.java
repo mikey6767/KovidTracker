@@ -104,7 +104,7 @@ public class StatusFragment extends Fragment {
                     tv_name.setText(String.valueOf(name));
                     String highRisk = "High Risk";
                     String lowRisk = "Low Risk";
-                    if(status > 10){
+                    if(status > 3){
                         tv_risk.setText(highRisk);
                         tv_risk.setTextColor(Color.parseColor("#db0012"));
                     }else{
