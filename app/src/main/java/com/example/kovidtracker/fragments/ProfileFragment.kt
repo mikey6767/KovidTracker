@@ -36,8 +36,7 @@ class ProfileFragment : Fragment() {
 
 
     private var usrname = ""
-    //lateinit var profile: TextView
-    //private val buttonsFragMap = mapOf(R.id.profile_his_btn to HistoryFragment.newInstance(usrname), R.id.profile_hs_btn to HealthStatusFragment.newInstance(usrname), R.id.profile_faq to FaqFragment.newInstance(usrname))
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -66,21 +65,19 @@ class ProfileFragment : Fragment() {
         user = fAuth.currentUser!!
 
         val documentReference = fStore.collection("users").document(userId)
-        documentReference.addSnapshotListener(
-            { documentSnapshot, e ->
-                if (documentSnapshot!!.exists()) {
-                    phonenumber.setText(documentSnapshot.getString("phone"))
-                    IC.setText(documentSnapshot.getString("IC"))
-                    profilename.setText(documentSnapshot.getString("name"))
-                    email.text = documentSnapshot.getString("email")
-                } else {
-                    Log.d("tag", "onEvent: Document do not exists")
-                }
-            })
+        documentReference.addSnapshotListener { documentSnapshot, e ->
+            if (documentSnapshot!!.exists()) {
+                phonenumber.setText(documentSnapshot.getString("phone"))
+                IC.setText(documentSnapshot.getString("IC"))
+                profilename.setText(documentSnapshot.getString("name"))
+                email.text = documentSnapshot.getString("email")
+            } else {
+                Log.d("tag", "onEvent: Document do not exists")
+            }
+        }
 
         view.findViewById<Button>(R.id.btn_editprofile).setOnClickListener {
-//            requireActivity().supportFragmentManager.beginTransaction()
-//                .replace(R.id.fragment_container, EditProfileFragment.newInstance("AAA")).commit()
+
             val intent = Intent(requireContext(), EditprofileActivity::class.java)
             startActivity(intent)
             intent.putExtra("name", profilename.getText().toString())
@@ -108,16 +105,7 @@ class ProfileFragment : Fragment() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             activity?.finish()
         }
-        //profile = view.findViewById<TextView>(R.id.tv_profile)
 
-        /*profile.setOnClickListener{
-            Toast.makeText(context, "This is Profile Fragment", Toast.LENGTH_SHORT).show()
-        }*/
-        //requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HistoryFragment.newInstance("AAA")).commit()
-        //requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HealthStatusFragment.newInstance("AAA")).commit()
     }
 
-    /*override fun onClick(btn: View?) {
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container, buttonsFragMap[btn?.id]!!)
-    }*/
 }

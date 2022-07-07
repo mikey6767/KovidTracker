@@ -86,10 +86,6 @@ public class StatusFragment extends Fragment {
         tv_ic = view.findViewById(R.id.tv_ic);
         tv_name = view.findViewById(R.id.tv_name);
         tv_risk = view.findViewById(R.id.tv_risk);
-//        tv_fBrand = view.findViewById(R.id.tv_fbrand);
-//        tv_fDate = view.findViewById(R.id.tv_fdate);
-//        tv_sBrand = view.findViewById(R.id.tv_sbrand);
-//        tv_sDate = view.findViewById(R.id.tv_sdate);
 
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
@@ -117,39 +113,6 @@ public class StatusFragment extends Fragment {
                 }
             }
         });
-
-
-//
-//        DocumentReference documentReferenceDose = fStore.collection("users").document(userId).collection("Dose").document("FirstDose");
-//        documentReferenceDose.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                if (value.exists()) {
-//
-//                    tv_fBrand.setText(value.getString("DoseBrand"));
-//                    tv_fDate.setText(value.getString("DoseDate"));
-//                }else{
-//                    tv_fBrand.setText("Null");
-//                    tv_fDate.setText("Null");
-//                }
-//            }
-//        });
-//
-//        DocumentReference documentReferenceDose2 = fStore.collection("users").document(userId).collection("Dose").document("SecondDose");
-//        documentReferenceDose2.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                if (value.exists()) {
-//
-//                    tv_sBrand.setText(value.getString("DoseBrand"));
-//                    tv_sDate.setText(value.getString("DoseDate"));
-//
-//                }else{
-//                    tv_sBrand.setText("Null");
-//                    tv_sDate.setText("Null");
-//                }
-//            }
-//        });
 
     }
 

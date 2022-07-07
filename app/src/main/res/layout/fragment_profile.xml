@@ -37,7 +37,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_below="@+id/tv_profiletitle"
-                android:background="@drawable/bg_rounded_corner">
+                android:background="@drawable/bg_checkin_history">
 
                 <ImageView
                     android:id="@+id/img_profilePicture"
@@ -110,7 +110,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="50dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/bg_rounded_corner">
+                android:background="@drawable/bg_checkin_history">
 
                 <Button
                     android:id="@+id/btn_editprofile"
@@ -124,8 +124,8 @@
                     android:drawableLeft="@drawable/ic_baseline_edit_note_24"
                     android:drawablePadding="5dp"
                     android:ems="10"
-                    android:fontFamily="@font/baumans"
                     android:text="Edit Profile Details"
+                    android:fontFamily="@font/baumans"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 

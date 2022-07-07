@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         val qrFAB = findViewById<FloatingActionButton>(R.id.fab_qr)
 
-        //Fixme Got Error. my idea was use the OnMenuItemClickListener to navigate But
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_home -> {

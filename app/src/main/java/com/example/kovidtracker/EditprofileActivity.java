@@ -55,16 +55,11 @@ public class EditprofileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
-
         Intent data = getIntent();
         final String Aname = data.getStringExtra("name");
         String Aemail = data.getStringExtra("email");
         String Aphone = data.getStringExtra("phone");
         String AIC = data.getStringExtra("IC");
-
-
-
-
 
         name =(EditText) findViewById(R.id.et_profileName);
         IC =(EditText) findViewById(R.id.et_profileIC);
@@ -226,50 +221,6 @@ public class EditprofileActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: " + Aname + " " + Aemail + " " + Aphone + " " + AIC);
 
-
-
-
-
-//        updatePasswordBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                String cpassword = password.getText().toString().trim();
-//                String cconfirmpassword = confirmpassword.getText().toString().trim();
-//
-//                if(TextUtils.isEmpty(cpassword)){
-//                    password.setError("Password is Required.");
-//                    return;
-//                }
-//
-//                if(TextUtils.isEmpty(cconfirmpassword)){
-//                    confirmpassword.setError("Password is Required.");
-//                    return;
-//                }
-//
-//                if(password.length() < 6){
-//                    password.setError("Password Must be >= 6 Characters");
-//                    return;
-//                }
-//
-//                if (!cpassword.equals(cconfirmpassword)) {
-//                    Toast.makeText(EditprofileActivity.this, "Password Do Not Match!", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//                    user.updatePassword(cpassword).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void aVoid) {
-//                            Toast.makeText(EditprofileActivity.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }).addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(EditprofileActivity.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-//            }
-//        });
-
     }
 
     @Override
@@ -278,19 +229,14 @@ public class EditprofileActivity extends AppCompatActivity {
         if(requestCode == 1000){
             if(resultCode == Activity.RESULT_OK){
                 Uri imageUri = data.getData();
-
-                //profileImage.setImageURI(imageUri);
-
                 uploadImageToFirebase(imageUri);
-
-
             }
         }
 
     }
 
     private void uploadImageToFirebase(Uri imageUri) {
-        // uplaod image to firebase storage
+        // upload image to firebase storage
         final StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override

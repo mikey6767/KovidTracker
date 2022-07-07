@@ -112,15 +112,12 @@ class HealthStatusFragment : Fragment() {
             recyclerView.adapter = adapter
         }
 
-        //val radioButtonNo =  arrayOf<RadioButton>(view.findViewById(R.id.hs_q1_n), view.findViewById(R.id.hs_q2_n), view.findViewById(R.id.hs_q3_n), view.findViewById(R.id.hs_q4_n), view.findViewById(R.id.hs_q5_n), view.findViewById(R.id.hs_q6_n))
-        //val radioButtonYes =  arrayOf<RadioButton>(view.findViewById(R.id.hs_q1_y), view.findViewById(R.id.hs_q2_y), view.findViewById(R.id.hs_q3_y), view.findViewById(R.id.hs_q4_y), view.findViewById(R.id.hs_q5_y), view.findViewById(R.id.hs_q6_y))
 
         view.findViewById<Button>(R.id.hs_submit).setOnClickListener {
             if (null in answer) {
                 Toast.makeText(requireContext(), "Please answer all questions", Toast.LENGTH_LONG)
                     .show()
             } else {
-                //beautiful
                 FirebaseFirestore.getInstance().collection("users")
                     .document(FirebaseAuth.getInstance().currentUser!!.uid)
                     .update("healthStatus", answer.count { it == true })
@@ -128,7 +125,7 @@ class HealthStatusFragment : Fragment() {
             }
         }
     }
-    //TODO no longer used
+
     companion object {
         @JvmStatic
         fun newInstance(user: String) =

@@ -118,8 +118,7 @@ class FaqFragment : Fragment() {
             .addOnFailureListener { exception ->
                 Toast.makeText(context, "Failed to load FAQ from database, please try again later",Toast.LENGTH_LONG).show()
             }
-        //TODO proper data, proper layout
-        //val data = arrayOf(arrayOf("Question 1", "Answer 1"), arrayOf("Question 2", "Answer 2"), arrayOf("Question 3", "Answer 3"))
+
     }
 
     companion object {

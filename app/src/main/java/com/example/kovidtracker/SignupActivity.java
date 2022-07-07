@@ -34,7 +34,6 @@ public class SignupActivity extends AppCompatActivity {
     Button mRegisterBtn;
     TextView mBackBtn;
     FirebaseAuth auth;
-    ProgressBar progressBar;
     FirebaseFirestore fStore;
     String userID;
 
@@ -55,9 +54,6 @@ public class SignupActivity extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
 
         auth.getInstance().signOut();
-
-
-
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override

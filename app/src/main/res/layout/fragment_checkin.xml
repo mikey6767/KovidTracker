@@ -99,7 +99,18 @@
 
                 </LinearLayout>
 
+
             </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_emptytitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/baloo"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/smoothpurple"
+                android:textSize="40dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

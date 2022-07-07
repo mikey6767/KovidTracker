@@ -8,11 +8,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -21,8 +21,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:padding="15dp"
-                android:background="@drawable/bg_rounded_corner"
-                tools:ignore="UselessParent">
+                android:background="@drawable/bg_checkin_history"
+                android:id="@+id/empty">
 
                 <TextView
                     android:id="@+id/tv_todotitle"
@@ -36,44 +36,6 @@
                     android:textColor="@color/smoothpurple"
                     android:textSize="36dp" />
 
-                <!--<RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_todotitle"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="30dp">
-
-                    <TextView
-                        android:id="@+id/tv_todolist1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="1. Stay home except to get medical care."
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/tv_todolist2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_todolist1"
-                        android:layout_marginTop="15dp"
-                        android:text="2. Monitor your symptoms carefully. If your symptoms get worse, call your healthcare provider immediately. "
-                        android:textAlignment="gravity"
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/tv_todolist3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_todolist2"
-                        android:layout_marginTop="15dp"
-                        android:text="3. Get rest and stay hydrated. "
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
-                </RelativeLayout>-->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/to_do_rc"
                     android:layout_width="match_parent"
@@ -82,12 +44,8 @@
             </RelativeLayout>
 
 
-
-
-
-
         </LinearLayout>
-    </ScrollView>-->
+    </ScrollView>
 
 
 </FrameLayout>

@@ -98,6 +98,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="30dp"
+                    android:id="@+id/dose"
                     android:background="@drawable/bg_dc">
 
                     <TextView
@@ -171,6 +172,28 @@
                     </LinearLayout>
 
                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dose">
+
+                    <TextView
+                        android:id="@+id/tv_emptytitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/baloo"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/smoothpurple"
+                        android:textSize="40dp" />
+
+
+
+                </RelativeLayout>
+
+
 
             </RelativeLayout>
 
