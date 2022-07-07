@@ -133,7 +133,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="30dp"
-                    android:text="Submit Changes" />
+                    android:text="Submit Changes"
+                    android:fontFamily="@font/baumans"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
 
                 <TextView
                     android:id="@+id/tv_editpswdescp"
@@ -157,19 +160,25 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="5dp"
-                    android:text="Change Password" />
+                    android:text="Change Password"
+                    android:fontFamily="@font/baumans"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
 
                 <Button
                     android:id="@+id/btn_backprofilefrag"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Back"
                     android:layout_below="@+id/btn_updateprofilepassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="60dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
-                    android:layout_marginLeft="60dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"/>
+                    android:text="Back"
+                    android:fontFamily="@font/baumans"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
 
 
 

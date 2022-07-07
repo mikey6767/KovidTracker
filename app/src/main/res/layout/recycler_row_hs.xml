@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_rounded_corner"
+    android:background="@drawable/bg_checkin_history"
     android:layout_marginTop="10dp"
     android:padding="20dp">
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Location"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -23,17 +23,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hs_question">
+
         <RadioButton
             android:id="@+id/hs_selection_yes"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:text="Yes"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
         <RadioButton
             android:id="@+id/hs_selection_no"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="No"
-            android:textSize="20dp" />
+            android:layout_height="38dp"
+            android:textSize="16dp" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

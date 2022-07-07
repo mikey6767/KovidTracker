@@ -96,7 +96,7 @@ public class StatusFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value.exists()) {
-                    name = value.getString("fName");
+                    name = value.getString("name");
                     ic = value.getString("IC");
                     status = value.getLong("healthStatus").intValue();
 
@@ -109,7 +109,7 @@ public class StatusFragment extends Fragment {
                         tv_risk.setTextColor(Color.parseColor("#db0012"));
                     }else{
                         tv_risk.setText(lowRisk);
-                        tv_risk.setTextColor(Color.parseColor("#ffffff"));
+                        tv_risk.setTextColor(Color.parseColor("#308226"));
                     }
 
                 }else{

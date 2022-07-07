@@ -120,12 +120,14 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="@color/smoothbtncolor"
+                    android:backgroundTint="@color/smoothpurple"
                     android:drawableLeft="@drawable/ic_baseline_edit_note_24"
                     android:drawablePadding="5dp"
                     android:ems="10"
+                    android:fontFamily="@font/baumans"
                     android:text="Edit Profile Details"
-                    android:textColor="#000000" />
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/profile_hs_btn"
@@ -136,12 +138,14 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="10dp"
-                    android:backgroundTint="@color/smoothbtncolor"
+                    android:backgroundTint="@color/smoothpurple"
                     android:drawableLeft="@drawable/ic_baseline_note_add_24"
                     android:drawablePadding="5dp"
                     android:ems="10"
-                    android:text="View Health Status"
-                    android:textColor="#000000" />
+                    android:fontFamily="@font/baumans"
+                    android:text="Update Health Status"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/profile_faq"
@@ -152,12 +156,14 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="10dp"
-                    android:backgroundTint="@color/smoothbtncolor"
+                    android:backgroundTint="@color/smoothpurple"
                     android:drawableLeft="@drawable/ic_baseline_announcement_24"
                     android:drawablePadding="5dp"
                     android:ems="10"
+                    android:fontFamily="@font/baumans"
                     android:text="Frequently Asked Questions"
-                    android:textColor="#000000" />
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/profile_logout"

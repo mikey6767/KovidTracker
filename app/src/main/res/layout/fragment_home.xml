@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/inappbg2"
-    tools:context=".fragments.HomeFragment">
+
+    tools:context=".fragments.HomeFragment"
+    android:background="@drawable/inappbg2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -268,13 +269,17 @@
                 android:id="@+id/btn_covidnow"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="Click Here to Know More (COVIDNOW.GOV.MY)"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="60dp"
                 android:layout_marginRight="30dp"
-
-                android:textColor="@color/white" />
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="@color/smoothpurple"
+                android:fontFamily="@font/baumans"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Click Here to Know More (COVIDNOW.GOV.MY)"
+                android:textColor="@color/white"
+                 />
 
 
         </LinearLayout>
