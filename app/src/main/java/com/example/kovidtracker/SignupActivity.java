@@ -138,10 +138,10 @@ public class SignupActivity extends AppCompatActivity {
                             String sDose= "2Dose";
                             DocumentReference documentReferenceDose2 = fStore.collection("users").document(userID).collection("Dose").document(sDose);
                             Map<String, Object> thisUserDose2 = new HashMap<>();
-                            thisUserDose2.put("brand", "Pfizer");
-                            thisUserDose2.put("batch", "B001202010");
+                            thisUserDose2.put("brand", "Sinovac");
+                            thisUserDose2.put("batch", "B002202010");
                             thisUserDose2.put("facility", "CLINIC NULL");
-                            thisUserDose2.put("date", "2020-10-01");
+                            thisUserDose2.put("date", "2020-11-10");
                             documentReferenceDose2.set(thisUserDose2).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
