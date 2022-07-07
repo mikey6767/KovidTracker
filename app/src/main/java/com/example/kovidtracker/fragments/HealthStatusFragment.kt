@@ -70,6 +70,7 @@ class HealthStatusFragment : Fragment() {
 
         //val data = arrayOf("Q1", "Q2", "Q3")
         val data = arrayListOf<String>()
+        answer.clear()
         FirebaseFirestore.getInstance().collection("common").document("healthStatus").get().addOnSuccessListener {
             JsonReader(StringReader(it["json"].toString())).use {
                 it.beginObject()
@@ -113,15 +114,18 @@ class HealthStatusFragment : Fragment() {
         //val radioButtonNo =  arrayOf<RadioButton>(view.findViewById(R.id.hs_q1_n), view.findViewById(R.id.hs_q2_n), view.findViewById(R.id.hs_q3_n), view.findViewById(R.id.hs_q4_n), view.findViewById(R.id.hs_q5_n), view.findViewById(R.id.hs_q6_n))
         //val radioButtonYes =  arrayOf<RadioButton>(view.findViewById(R.id.hs_q1_y), view.findViewById(R.id.hs_q2_y), view.findViewById(R.id.hs_q3_y), view.findViewById(R.id.hs_q4_y), view.findViewById(R.id.hs_q5_y), view.findViewById(R.id.hs_q6_y))
 
-        view.findViewById<Button>(R.id.hs_submit).setOnClickListener({
-            if(null in answer){
-                Toast.makeText(requireContext(), "Please answer all questions", Toast.LENGTH_LONG).show()
-            }else{
+        view.findViewById<Button>(R.id.hs_submit).setOnClickListener {
+            if (null in answer) {
+                Toast.makeText(requireContext(), "Please answer all questions", Toast.LENGTH_LONG)
+                    .show()
+            } else {
                 //beautiful
-                FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).update("healthStatus", answer.count{it == true})
+                FirebaseFirestore.getInstance().collection("users")
+                    .document(FirebaseAuth.getInstance().currentUser!!.uid)
+                    .update("healthStatus", answer.count { it == true })
                 Toast.makeText(requireContext(), "Health status updated!", Toast.LENGTH_LONG).show()
             }
-        })
+        }
     }
     //TODO no longer used
     companion object {
