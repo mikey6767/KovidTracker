@@ -107,6 +107,7 @@ class HealthStatusFragment : Fragment() {
             }
             val recyclerView: RecyclerView = view.findViewById(R.id.hs_rv)
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
+            recyclerView.isNestedScrollingEnabled = false
             adapter = HealthStatusAdapter(data)
             recyclerView.adapter = adapter
         }

@@ -63,7 +63,7 @@ public class CheckInFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerview);
         // Linear Vertical
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-
+        recyclerView.setNestedScrollingEnabled(false);
 
         RetrieveData();
 

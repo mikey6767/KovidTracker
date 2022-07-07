@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/inappbg2">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -61,7 +61,7 @@
 
 
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 

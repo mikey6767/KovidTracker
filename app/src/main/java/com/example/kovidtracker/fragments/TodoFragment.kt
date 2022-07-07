@@ -30,9 +30,10 @@ class ToDoAdapter(private val dataSet: List<List<String>>): RecyclerView.Adapter
         viewHolder.apply {
             title.text = dataSet[position][0]
             var contentStr = ""
-            for(i in 1 until dataSet[position].count()){
+            for(i in 1 until (dataSet[position].count() - 1)){
                 contentStr += "    - " + dataSet[position][i] + "\n\n"
             }
+            contentStr += "    - " + dataSet[position][dataSet[position].count() - 1]
             content.text = contentStr
         }
     }
