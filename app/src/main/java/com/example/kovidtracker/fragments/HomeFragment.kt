@@ -60,8 +60,7 @@ class HomeFragment : Fragment() {
     public fun fetchApiDataUsingRetrofit() {
 
         // Set up the Retrofit
-        // https://disease.sh/v3/covid-19/all
-        val baseUrl = "https://disease.sh/v3/covid-19/"
+        val baseUrl = "https://api.apify.com/v2/key-value-stores/6t65lJVfs3d8s6aKc/records/"
         val gson = GsonBuilder().setLenient().create()
         // Create a Retrofit builder and pass the gson in
         val retrofit = Retrofit.Builder()
@@ -76,10 +75,10 @@ class HomeFragment : Fragment() {
             // success
             override fun onResponse(call: Call<Statistics>, response: Response<Statistics>) {
                 // bind the data from the API to the views
-                totalconfirmedcases.setText(response.body()?.getTodayCases()) // return cases value
-                totalrecoverycases.setText(response.body()?.getTodayRecovered())
+                totalconfirmedcases.setText(response.body()?.getTestedPositive()) // return cases value
+                totalrecoverycases.setText(response.body()?.getRecovered())
                 totalcriticalcases.setText(response.body()?.getCritical())
-                totaldeathcases.setText(response.body()?.getTodayDeaths())
+                totaldeathcases.setText(response.body()?.getDeceased())
             }
 
             //failure

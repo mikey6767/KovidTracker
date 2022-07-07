@@ -6,49 +6,53 @@ import com.google.gson.annotations.SerializedName;
 
 public class Statistics {
 
-    @SerializedName("todayCases")
+    @SerializedName("testedPositive")
     @Expose
-    private String todayCases;
+    private String testedPositive;
+
+    @SerializedName("deceased")
+    @Expose
+    private String deceased;
+
+    @SerializedName("recovered")
+    @Expose
+    private String recovered;
 
     @SerializedName("critical")
     @Expose
     private String critical;
 
-    @SerializedName("todayRecovered")
-    @Expose
-    private String todayRecovered;
 
-    @SerializedName("todayDeaths")
-    @Expose
-    private String todayDeaths;
-
-
-    public Statistics(
-            String todayCases,
-            String todayDeaths,
-            String critical,
-            String todayRecovered
-    ) {
-        this.critical = critical;
-        this.todayCases = todayCases;
-        this.todayDeaths = todayDeaths;
-        this.todayRecovered = todayRecovered;
+    public String getTestedPositive() {
+        return testedPositive;
     }
 
-    public String getTodayCases() {
-        return this.todayCases;
+    public String getDeceased() {
+        return deceased;
+    }
+
+    public String getRecovered() {
+        return recovered;
     }
 
     public String getCritical() {
         return this.critical;
     }
 
-    public String getTodayDeaths() {
-        return this.todayDeaths;
+    public Statistics(
+            String testedPositive,
+            String deceased,
+            String critical,
+            String recovered
+    ) {
+        this.critical = critical;
+        this.testedPositive = testedPositive;
+        this.deceased = deceased;
+        this.recovered = recovered;
     }
 
-    public String getTodayRecovered() {
-        return this.todayRecovered;
-    }
+
+
+
 
 }

@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:paddingBottom="60dp">
             <TextView
                 android:id="@+id/tv_faqtitle"
                 android:layout_width="match_parent"
